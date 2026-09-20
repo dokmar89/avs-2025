@@ -1,32 +1,32 @@
-# Age-verification service — integration source
+# Služba ověřování věku — integrační zdrojový kód
 
-An age-verification service codebase containing an Express backend, browser flow source and example integrations for Node.js and PHP.
+Kód služby pro ověřování věku s backendem Express, zdroji rozhraní prohlížeče a příklady napojení v Node.js a PHP.
 
-**Status:** Legacy integration/reference codebase. Existing Go.cam-related attribution does not imply certification of this repository or its owner.
+**Stav:** Starší integrační/referenční projekt. Původní zmínky o Go.cam nedokládají certifikaci tohoto repozitáře ani jeho vlastníka.
 
-## Scope
+## Co projekt obsahuje
 
-- TypeScript backend source and generated JavaScript application files.
-- Twig views and Sass/browser-side build source.
-- Node.js and PHP iframe/redirect integration examples.
-- Gulp build/watch scripts and benchmark notebooks.
+- Serverový zdroj v TypeScriptu a generované soubory JavaScriptu.
+- Šablony Twig, Sass a zdroje pro sestavení klientské části.
+- Příklady integrace přes iframe a přesměrování v Node.js a PHP.
+- Skripty Gulp pro sestavení a sledování změn; notebooky pro měření.
 
-## Technology
+## Technologie
 
 TypeScript, Express, Twig.
 
-## Architecture and source map
+## Architektura a struktura
 
-- `source/backend/app/` — backend source
-- `source/frontend/` — browser and style source
-- `app/` — compiled application and views
-- `script/gulpfile.js` — build pipeline
-- `example/` — integration examples
-- `LICENSE` — existing license terms
+- `source/backend/app/` — zdroj serverové části
+- `source/frontend/` — zdroj klientské části a stylů
+- `app/` — sestavená aplikace a šablony
+- `script/gulpfile.js` — postup sestavení
+- `example/` — integrační příklady
+- `LICENSE` — stávající licenční podmínky
 
-## Local development
+## Lokální vývoj
 
-Requires Node.js and npm. The package declares:
+Potřebujete Node.js a npm. Balíček deklaruje:
 
 ```sh
 npm install
@@ -34,16 +34,16 @@ npm run build
 npm run startDev
 ```
 
-`npm run startProd` runs the compiled backend; `npm run watch` starts the Gulp watchers. Build helpers live in `script/gulpfile.js`. Confirm Gulp/toolchain availability and backend configuration before running. These commands were not executed in this documentation review.
+`npm run startProd` spouští sestavenou serverovou část; `npm run watch` spouští sledování změn přes Gulp. Postup je v `script/gulpfile.js`. Před spuštěním ověřte dostupnost nástrojů a konfiguraci serveru. Příkazy nebyly při této dokumentační úpravě provedeny.
 
-## Configuration and limitations
+## Konfigurace a omezení
 
-Review backend configuration and required external services before testing. The original README refers to Go.cam and third-party certification pages; those references are not evidence that this copy is certified or authored entirely from scratch. Generated files coexist with source, so validate the build pipeline before changing either.
+Před testem ověřte konfiguraci serveru a externí služby. Původní README odkazovalo na Go.cam a certifikace třetích stran; tyto odkazy nejsou důkazem certifikace této kopie ani jejího zcela původního autorství. Generované soubory jsou vedle zdrojů, proto před změnami ověřte postup sestavení.
 
-## Portfolio relevance
+## Přínos pro portfolio
 
-A reference for understanding web integration boundaries and JavaScript/PHP client examples; distinguish upstream code from local changes.
+Reference pro pochopení webových integrací a klientských příkladů v JavaScriptu a PHP. Při prezentaci odlišujte převzatý kód od vlastních úprav.
 
-## Documentation next steps
+## Co doplnit do dokumentace
 
-Capture screenshots using synthetic data, document a reproducible test run, and record which integrations have been verified. Keep credentials and deployment-specific configuration outside version control.
+Snímky obrazovky s fiktivními daty, opakovatelný postup ověření a přehled skutečně otestovaných integrací. Přihlašovací údaje a konfigurace konkrétního nasazení patří mimo Git.
